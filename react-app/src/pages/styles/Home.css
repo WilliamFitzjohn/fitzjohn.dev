@@ -1,3 +1,15 @@
 .router-section{
+    position: absolute;
+    left: 0;
+    bottom: 25%;
     text-align: left;
+    font-size: 3rem;
+    font-weight: 300;
+}
+.router-section div{
+    margin-bottom: -0.75rem;
+    transition: ease-in-out 0.25s;
+}
+.router-section div:hover{
+    color:var(--highlight-colour);
 }

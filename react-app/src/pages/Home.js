@@ -10,7 +10,7 @@ function Home() {
 
 
     return (
-        <Container>
+        <Container className='body-container'>
             <section className='title-section'>
                 <p>Hello I'm</p>
                 <h2>William Fitzjohn</h2>
@@ -20,8 +20,10 @@ function Home() {
                 <div className='unselectable' onClick={onDivClick} id='About'>About</div>
                 <div className='unselectable' onClick={onDivClick} id='Resume'>Resume</div>
             </section>
-            <section className='bg-section'>
-
+            <section className='bg-section unselectable'>
+                <h1>Creator</h1>
+                <h1>Engineer</h1>
+                <h1>Developer</h1>
             </section>
         </Container>
     );

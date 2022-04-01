@@ -1,5 +1,47 @@
+.body-container {
+    height: 100%;
+    padding-top: 25px;
+    position: relative;
+}
+
 .title-section{
+    margin-top: 5%;
     text-align: left;
+}
+.title-section div{
+    display: flex;
+    color: var(--highlight-colour);
+    align-items: center;
+}
+.title-section div svg{
+    width: 4rem;
+    height: 3rem;
+}
+.title-section p{
+    color: var(--highlight-colour);
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.title-section h2{
+    font-size: 5rem;
+}
+
+.bg-section{
+    z-index:1;
+    text-align: left;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5%;
+    color: #222222;
+}
+.bg-section h1{
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    margin: -10px;
+    font-size: 7rem;
+    font-weight: 700;
 }
 
 /* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
