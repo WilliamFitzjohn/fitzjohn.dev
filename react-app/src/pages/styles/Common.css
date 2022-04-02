@@ -27,7 +27,7 @@
 }
 
 .bg-section{
-    z-index:1;
+    z-index: 0;
     text-align: left;
     display: flex;
     position: absolute;

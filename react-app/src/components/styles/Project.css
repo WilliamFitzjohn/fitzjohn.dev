@@ -1,3 +1,33 @@
 .project-container{
+    margin: 1rem;
+    display: flex;
     text-align: left;
+    background-color: var(--main-bg-color);
+    height: 10rem;
+}
+
+.project-container img{
+    width: 10rem;
+    height: 10rem;
+    filter: grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+.project-container img:hover{
+    filter: none;
+}
+.project-container div{
+    margin: 0.5rem 1rem;
+}
+
+.project-container h3{
+    color:var(--highlight-colour);
+    margin: 0;
+}
+.project-sub{
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+}
+.project-desc{
+    margin: 0;
 }

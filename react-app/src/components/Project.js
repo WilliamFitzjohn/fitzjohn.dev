@@ -7,16 +7,25 @@ class Project extends Component{
         this.name = props.name;
         this.tools = props.tools;
         this.desc = props.desc;
+        this.img = props.img;
+    }
+
+    getImg(){
+        if(this.img == null){
+            return null;
+        }else{
+            return(<img src={'imgs/' + this.img}></img>);
+        }
     }
 
     render(){
         return(
             <div className="project-container">
-                
+                {this.getImg()}
                 <div>
                     <h3>{this.name}</h3>
-                    <p>{this.tools}</p>
-                    <p>{this.desc}</p>
+                    <p className="project-sub">{this.tools}</p>
+                    <p className="project-desc">{this.desc}</p>
                 </div>
             </div>
         );

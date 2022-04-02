@@ -1,0 +1,17 @@
+.about-me-container{
+    margin-top: 2rem;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    text-align: left;
+}
+
+.me{
+    width: 20rem;
+    filter:grayscale();
+    margin: 0 2rem 2rem 0;
+}
+
+.career-container{
+    text-align: left;
+}
