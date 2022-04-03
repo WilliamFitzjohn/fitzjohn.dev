@@ -2,6 +2,7 @@ import './styles/About.css'
 import './styles/Common.css'
 import { Container } from 'react-bootstrap';
 import { BsBoxArrowInLeft } from 'react-icons/bs';
+import Job from '../components/Job'
 
 function About() {
     function backClick(){
@@ -31,6 +32,32 @@ function About() {
             </section>
             <section className='career-container'>
                 <h1>Career</h1>
+                <Job 
+                    comp='OVC'
+                    title='Software Developer'
+                    year='2022'
+                />
+                <Job 
+                    comp='Deloitte'
+                    title='IT Co-op'
+                    year='Summer 2022'
+                    />
+                <Job 
+                    comp='Deloitte'
+                    title='IT Co-op'
+                    year='Summer 2021'
+                    desc='• Worked with Deloitte Datacenter Services to manage thousands of virtual machines used by Deloitte Canada and Chile.
+                    • Joined an operations team to deploy VMs, troubleshoot servers, and delegate work to other teams.
+                    • Developed scripts to gather data from thousands of virtual machines to measure KPIs for upper management.
+                    • Engaged with the Deloitte Networks team to learn about enterprise networking and how it applies to all tech disciplines.
+                    • Assisted team members in building/racking servers in the data centers.
+                    • Learned a lot about virtualization, and general daily IT operations.'
+                />
+                <Job 
+                    comp='Going Ductless'
+                    title='HVAC Apprentice'
+                    year='2017-2020'
+                />
             </section>
         </Container>
     );
