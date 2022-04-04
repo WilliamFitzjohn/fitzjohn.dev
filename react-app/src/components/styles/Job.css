@@ -3,6 +3,7 @@
 }
 .job-header {
     padding:0.4rem 1rem;
+    margin: 0;
     background-color: var(--secondary-bg-color);
     width: 100%;
     display: flex;
@@ -37,6 +38,8 @@
 .job-desc-container{
     background-color: var(--secondary-bg-color);
     width: 100%;
-    height: 1rem;
-    margin: 0 0;
+    height: auto;
+    margin: 0;
+    padding:0.4rem 1rem;
+    top: 0;
 }
