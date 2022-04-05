@@ -1,15 +1,31 @@
 .about-me-container{
-    margin-top: 2rem;
+    margin: 2rem 0;
     z-index: 1;
     position: relative;
     display: flex;
     text-align: left;
 }
-
+.about-me-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .me{
-    width: 20rem;
+    height: 20rem;
     filter:grayscale();
-    margin: 0 2rem 2rem 0;
+    margin: 0 2rem 0 0;
+}
+
+.degree-container{
+    display:flex;
+    padding:1rem;
+    background-color: var(--secondary-bg-color);
+}
+.degree-container img{
+    height: 7rem;
+}
+.degree-container div{
+    padding: 0 1rem;
 }
 
 .career-container{

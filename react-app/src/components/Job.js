@@ -11,14 +11,25 @@ function Job(props) {
         setDropdown(!dropdown);
     }
 
-    function getDesc(){
-        if(dropdown){
+    function getImg(){
+        if(props.img == null){
+            return null;
+        }else{
             return(
-                <div className='job-desc-container'>
-                    <p>{props.desc}</p>
-                </div>
+                <a href={props.imglink} target='_black'>
+                    <img className='job-image unselectable' src={'imgs/' + props.img}/>
+                </a>
             );
-        }else{return null;}
+        }
+    }
+
+    function getDesc(){
+        if(!props.desc){return null}
+        return props.desc.map((description, index) => {
+            return (
+                <p className='job-desc-li' key={index}>{description}</p>
+            )
+        });
     }
 
     function getChevron(){
@@ -27,6 +38,18 @@ function Job(props) {
         }else{
             return(<BsChevronDown/>);
         }
+    }
+
+    function getDropdown(){
+        if(!dropdown){return null}
+        return(
+            <div className='job-dropdown-container'>
+                {getImg()}
+                <div className='job-desc-container'>
+                    {getDesc()}
+                </div>
+            </div>
+        );
     }
 
     return(
@@ -41,7 +64,7 @@ function Job(props) {
                     {getChevron()}
                 </div>
             </div>
-            {getDesc()}
+            {getDropdown()}
         </div>
     );
 }

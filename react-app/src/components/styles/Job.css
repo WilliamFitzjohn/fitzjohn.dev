@@ -35,11 +35,29 @@
     height: 100%;
     width: 2rem;
 }
-.job-desc-container{
+.job-dropdown-container{
+    display: flex;
     background-color: var(--secondary-bg-color);
+    background-color: #272727;
     width: 100%;
     height: auto;
     margin: 0;
-    padding:0.4rem 1rem;
+    padding: 1rem;
     top: 0;
+    align-items: center;
+}
+.job-desc-container{
+    padding: 0 1rem 0 2rem;
+}
+.job-desc-li{
+    padding: 0;
+    margin: 0;
+}
+.job-image{
+    height: 10rem;
+    transition: ease-in-out 0.25s;
+    filter: grayscale();
+}
+.job-image:hover{
+    filter:none;
 }
