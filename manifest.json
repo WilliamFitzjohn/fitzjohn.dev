@@ -1,0 +1,15 @@
+{
+  "short_name": "Fitzjohn",
+  "name": "William Fitzjohn's Portfolio",
+  "icons": [
+    {
+      "src": "imgs/PersonalWebLogo.png",
+      "type": "image/png",
+      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFF500",
+  "background_color": "#151515"
+}
