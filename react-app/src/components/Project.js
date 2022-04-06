@@ -14,7 +14,7 @@ class Project extends Component{
         if(this.img == null){
             return null;
         }else{
-            return(<img src={'imgs/' + this.img}></img>);
+            return(<img alt={this.name} src={'imgs/' + this.img}></img>);
         }
     }
 

@@ -1,9 +1,9 @@
 .router-section{
     position: absolute;
-    left: 0;
+    z-index: 3;
     bottom: 25%;
     text-align: left;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 300;
 }
 .router-section div{
@@ -12,4 +12,15 @@
 }
 .router-section div:hover{
     color:var(--highlight-colour);
+}
+
+@media only screen and (max-height: 404px) {
+    .router-section{
+        bottom:auto;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .router-section{
+        font-size: 5rem;
+    }
 }

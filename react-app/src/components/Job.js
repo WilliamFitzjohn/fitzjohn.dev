@@ -17,7 +17,7 @@ function Job(props) {
         }else{
             return(
                 <a href={props.imglink} target='_black'>
-                    <img className='job-image unselectable' src={'imgs/' + props.img}/>
+                    <img className='job-image unselectable' alt={props.comp} src={'imgs/' + props.img}/>
                 </a>
             );
         }

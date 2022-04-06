@@ -5,6 +5,8 @@ html {
   --secondary-bg-color: #222222;
   background-color: var(--main-bg-color);
   height: 100%;
+  width: 100%;
+  margin: 0%;
 }
 
 body {
@@ -23,4 +25,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen and (max-width: 991px) {
+  html{
+      font-size: small;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html{
+      font-size: x-small;
+  }
 }

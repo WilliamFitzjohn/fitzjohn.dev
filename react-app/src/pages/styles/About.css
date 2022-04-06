@@ -13,6 +13,7 @@
 }
 .me{
     height: 20rem;
+    width: 20rem;
     filter:grayscale();
     margin: 0 2rem 0 0;
 }
@@ -35,4 +36,33 @@
 .career-container{
     text-align: left;
     padding-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1399px) {
+    .about-me-desc{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .about-me-container{
+        flex-direction: column;
+    }
+    .me{
+        width: 25rem;
+        height: 25rem;
+        margin:0 auto 2rem auto;
+    }
+    .about-me-desc div:first-child{
+        padding: 1rem;
+        background-color: var(--secondary-bg-color);
+    }
+    .about-me-desc div:first-child h3{
+        text-align: center;
+    }
+    /* .about-me-desc div:first-child p{
+        padding: 0 4rem;
+    } */
+    .degree-container{
+        margin-top: 2rem;
+    }
 }

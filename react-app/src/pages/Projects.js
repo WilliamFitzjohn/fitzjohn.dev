@@ -55,7 +55,7 @@ function Projects() {
                     desc='A full stack CRUD web app that works with GPX files that track GPS coordinates. Backend coded in C, frontend in JavaScript, HTML, CSS. Linked to a MySQL database.'
                 />
                 <Project 
-                    img=''
+                    img='PXORLogo.png'
                     name='PurpleXOR'
                     tools='Java'
                     desc='A Minecraft mod using the Forge API which added new items and blocks into the game. This was my first programming project at age 13.'
