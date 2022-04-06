@@ -6,6 +6,7 @@
     text-align: left;
 }
 .about-me-desc{
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,6 +24,9 @@
 }
 .degree-container img{
     height: 7rem;
+}
+.degree-container h3{
+    margin-bottom: 5px;
 }
 .degree-container div{
     padding: 0 1rem;

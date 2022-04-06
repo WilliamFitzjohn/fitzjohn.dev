@@ -23,7 +23,7 @@ function Projects() {
                 <h1>Engineer</h1>
                 <h1>Developer</h1>
             </section>
-            <section className='content-container'>
+            <section className='content-container projects-container'>
                 <Project 
                     img='PersonalWebLogo.png'
                     name='Portfolio Website'

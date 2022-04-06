@@ -22,8 +22,8 @@ function Resume() {
                 <h1>Engineer</h1>
                 <h1>Developer</h1>
             </section>
-            <section className='content-container'>
-
+            <section className='content-container resume-container'>
+                <embed src="./pdfs/resume-latex.pdf" height="375" type="application/pdf"/>
             </section>
         </Container>
     );

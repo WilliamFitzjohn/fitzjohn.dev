@@ -28,12 +28,13 @@ function About() {
                 <div className='about-me-desc'>
                     <div>
                         <h3>Hello, I'm William</h3>
-                        <p>I’m an English software developer that loves to build stuff :)</p>
+                        <p>I’m an English software developer and I love to take pride in my work. Soon I'll graduate from university where I will continue to grow my career. In my free time I play games, hangout with friends, and work on side projects.</p>
                     </div>
                     <div className='degree-container'>
                         <img src='./imgs/UOGLogo.png'/>
                         <div>
                             <h3>Bachelor of Computing (Honours)</h3>
+                            <p style={{'font-style': 'italic', 'margin-bottom':'5px'}}>2019-2023</p>
                             <p>Major in Computer Science, Minor in Economics</p>
                         </div>
                     </div>
@@ -46,12 +47,21 @@ function About() {
                     title='Software Developer'
                     year='2022'
                     img='OVCLogo.jpg'
+                    desc={[
+                    '• Developing web pages in react',
+                    '• More to come soon...']}
                     imglink='https://animalhealthmetrics.org/'
                 />
                 <Job 
                     comp='Deloitte'
                     title='IT Co-op'
                     year='Summer 2022'
+                    desc={[
+                    '• Worked with Deloitte Datacenter Services to manage thousands of virtual machines.',
+                    '• Joined an operations team to deploy VMs, troubleshoot servers, and delegate work.',
+                    '• Developed scripts to gather data from VMs to measure KPIs for upper management.',
+                    '• Engaged with the Deloitte Networks team to learn about enterprise networking.',
+                    '• Assisted team members in building/racking servers in the data centers.']}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />
