@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 function Home() {
 
     function onDivClick(e){
-        window.location.href = "/"+e.target.id;
+        window.location.href = "/#/"+e.target.id;
     }
 
 
