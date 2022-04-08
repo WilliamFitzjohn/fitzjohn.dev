@@ -62,3 +62,33 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+/* Transitions */
+.page-transition{
+    position: fixed;
+    /* transform: rotate3d(0, 0, 1, 45deg); */
+    height: 200%;
+    width: 0%;
+    pointer-events: none;
+}
+
+.pt-1t{transition: 0.5s ease-in-out;}
+.pt-2t{transition: 0.45s ease-in-out;}
+.pt-3t{transition: 0.4s ease-in-out;}
+.pt-1{
+    z-index: 10;
+    background-color: #444;
+}
+.pt-2{
+    z-index: 11;
+    background-color: var(--highlight-colour);
+}
+.pt-3{
+    z-index: 12;
+    background-color: var(--main-bg-color);
+}
+
+.transition-active{
+    width: 100%;
+
+}

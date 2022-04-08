@@ -7,6 +7,9 @@ import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
+    <span className='page-transition pt-1 pt-1t transition-active'/>
+    <span className='page-transition pt-2 pt-2t transition-active'/>
+    <span className='page-transition pt-3 pt-3t transition-active'/>
     <HashRouter>
       <App />
     </HashRouter>

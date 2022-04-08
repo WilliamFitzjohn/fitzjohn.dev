@@ -5,8 +5,40 @@ import { BsBoxArrowInLeft } from 'react-icons/bs';
 import Project from '../components/Project'
 
 function Projects() {
+
+    // On Load Transition
+    const transitionEle = document.getElementsByClassName('page-transition');
+    setTimeout(() => {
+        // Open page transition
+        for (let i = 0; i < transitionEle.length;i++){
+            transitionEle[i].classList.remove('transition-active');
+        }
+        setTimeout(() => {
+            //set timing to opposite direction
+            let pt1 = document.getElementsByClassName("pt-1")[0];
+            pt1.classList.remove('pt-1t');
+            pt1.classList.add('pt-3t');
+            let pt3 = document.getElementsByClassName("pt-3")[0];
+            pt3.classList.remove('pt-3t');
+            pt3.classList.add('pt-1t');
+        },500);
+    }, 200);
+
     function backClick(){
-        window.location.href = "/";
+        const transitionEle = document.getElementsByClassName('page-transition');
+        for (let i = 0; i < transitionEle.length;i++){
+          transitionEle[i].classList.add('transition-active');
+        }
+        setTimeout(() => {
+            window.location.href = "/#/";
+            //set timing to opposite direction
+            let pt1 = document.getElementsByClassName("pt-1")[0];
+            pt1.classList.remove('pt-3t');
+            pt1.classList.add('pt-1t');
+            let pt3 = document.getElementsByClassName("pt-3")[0];
+            pt3.classList.remove('pt-1t');
+            pt3.classList.add('pt-3t');
+        }, 500);
     }
 
     return (
@@ -25,7 +57,7 @@ function Projects() {
             </section>
             <section className='content-container projects-container'>
                 <Project 
-                    img='PersonalWebLogo.png'
+                    img='PersonalWebLogoYellow.png'
                     name='Portfolio Website'
                     tools='React, HTML, Node.js'
                     desc='Simple portfolio website built from scratch to show myself off.'
@@ -37,7 +69,7 @@ function Projects() {
                     desc='A group project that scrapes the UofGuelph / UWaterloo course databases and allows users to search and graph courses.'
                 />
                 <Project 
-                    img='GDLogo.png'
+                    img='GDLogoBlue.png'
                     name='Going Ductless Website'
                     tools='WordPress'
                     desc='Contract work for a previous employer to show off their business.'
