@@ -1,4 +1,8 @@
-![Title](/react-app/public/imgs/Fitzjohn-logos_black.png)
+<p align="center">
+  <img alt="Header Image" src="/react-app/public/imgs/Fitzjohn-logos_black.png" width="400px"/>
+</p>
+<!-- ![Title](/react-app/public/imgs/Fitzjohn-logos_black.png) -->
+
 # [FITZJOHN.dev](https://fitzjohn.dev)
 William Fitzjohn's Portfolio and Interactive Resume
 
@@ -11,8 +15,11 @@ This app was designed first in Figma.\
 
 ### Development
 Start a development server by running the commands below.\
-`cd react-app` `npm run start`
+`cd react-app`\
+`npm run start`
 
 ### Deployment
 These commands will pack the react app and deploy the site to github pages.\
-`cd react-app` `npm run deploy` 
+`cd react-app`\
+`npm run build`\
+`npm run deploy` 
