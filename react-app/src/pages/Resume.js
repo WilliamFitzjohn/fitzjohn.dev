@@ -55,7 +55,13 @@ function Resume() {
                 <h1>Developer</h1>
             </section>
             <section className='content-container resume-container'>
-                <embed src="./pdfs/resume-latex.pdf" height="375" type="application/pdf"/>
+                <iframe
+                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://fitzjohn.dev/pdfs/resume-latex.pdf#toolbar=0&scrollbar=0"
+                    frameBorder="0"
+                    scrolling="auto"
+                    height="100%"
+                    width="100%"
+                />
             </section>
         </Container>
     );
