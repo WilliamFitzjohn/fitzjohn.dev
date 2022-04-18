@@ -10,16 +10,32 @@
     width: 10rem;
     height: 10rem;
     filter: grayscale(100%);
-    transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.2s;
 }
 .project-container img:hover{
     filter: none;
 }
-.project-container div{
+.project-container div:nth-child(2){
     margin: 0.5rem 1rem;
+    width: 100%;
 }
 
-.project-container h3{
+.project-header{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.project-link{
+    text-decoration:underline var(--highlight-colour);
+    transition: ease-in-out 0.2s;
+}
+.project-link h3{
+    color: white !important;
+}
+.project-link h3:hover{
+    color: var(--highlight-colour) !important;
+}
+.project-header h3{
     color:var(--highlight-colour);
     margin: 0;
 }

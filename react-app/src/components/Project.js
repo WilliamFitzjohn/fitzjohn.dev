@@ -8,6 +8,7 @@ class Project extends Component{
         this.tools = props.tools;
         this.desc = props.desc;
         this.img = props.img;
+        this.link = props.link;
     }
 
     getImg(){
@@ -18,12 +19,27 @@ class Project extends Component{
         }
     }
 
+    getLink(){
+        if(this.link == null){
+            return null;
+        }else{
+            return(
+                <a href={this.link} target='_black' className="project-link">
+                    <h3 className="unselectable">link</h3>
+                </a>
+            );
+        }
+    }
+
     render(){
         return(
             <div className="project-container">
                 {this.getImg()}
                 <div>
-                    <h3>{this.name}</h3>
+                    <div className="project-header">
+                        <h3>{this.name}</h3>
+                        {this.getLink()}
+                    </div>
                     <p className="project-sub">{this.tools}</p>
                     <p className="project-desc">{this.desc}</p>
                 </div>

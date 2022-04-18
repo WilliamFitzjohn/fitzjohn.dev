@@ -57,10 +57,18 @@ function Projects() {
             </section>
             <section className='content-container projects-container'>
                 <Project 
+                    img='TwitchAlertLogo.png'
+                    name='TwitchAlert'
+                    tools='Twitch API, Node.js'
+                    desc='A MagicMirror module to notify you when your favourite streamers are live.'
+                    link='https://github.com/WilliamFitzjohn/MMM-TwitchAlert'
+                    />
+                <Project 
                     img='PersonalWebLogoYellow.png'
                     name='Portfolio Website'
                     tools='React, HTML, Node.js'
                     desc='Simple portfolio website built from scratch to show myself off.'
+                    link='https://github.com/WilliamFitzjohn/fitzjohn.dev'
                 />
                 <Project 
                     img='UniSearchLogo.ico'
@@ -70,9 +78,10 @@ function Projects() {
                 />
                 <Project 
                     img='GDLogoBlue.png'
-                    name='Going Ductless Website'
+                    name='Going Ductless Site'
                     tools='WordPress'
                     desc='Contract work for a previous employer to show off their business.'
+                    link='https://goingductless.ca/'
                 />
                 <Project 
                     img='QuizBotLogo.png'
