@@ -56,7 +56,7 @@ function Resume() {
             </section>
             <section className='content-container resume-container'>
                 <iframe
-                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://fitzjohn.dev/pdfs/resume-latex.pdf#toolbar=0&scrollbar=0"
+                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://fitzjohn.dev/pdfs/WilliamFitzjohnResume.pdf#toolbar=0&scrollbar=0"
                     frameBorder="0"
                     scrolling="auto"
                     height="100%"
