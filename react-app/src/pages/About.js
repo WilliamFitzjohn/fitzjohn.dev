@@ -75,37 +75,33 @@ function About() {
             </section>
             <section className='career-container'>
                 <h1>Career</h1>
-                {/* <Job 
-                    comp='OVC'
-                    title='Software Developer'
-                    year='2022'
-                    img='OVCLogo.jpg'
-                    desc={[
-                    '• Developing web pages in react',
-                    '• More to come soon...']}
-                    imglink='https://animalhealthmetrics.org/'
-                /> */}
                 <Job 
                     comp='Deloitte'
-                    title='IT Co-op'
-                    year='Summer 2022'
+                    title='IT Co-op - Solutions Delivery'
+                    year='May 2022 - Current'
                     desc={[
-                    '• Worked with Deloitte Datacenter Services to manage thousands of virtual machines.',
-                    '• Joined an operations team to deploy VMs, troubleshoot servers, and delegate work.',
-                    '• Developed scripts to gather data from VMs to measure KPIs for upper management.',
-                    '• Engaged with the Deloitte Networks team to learn about enterprise networking.',
-                    '• Assisted team members in building/racking servers in the data centers.']}
+                    '• Creating automated chat-bots to aid users with a variety of tasks.']}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />
                 <Job 
-                    comp='Deloitte'
-                    title='IT Co-op'
-                    year='Summer 2021'
+                    comp='Ontario Veterinary College'
+                    title='Software Developer'
+                    year='April 2022 - May 2022'
+                    img='OVCLogo.jpg'
                     desc={[
+                    '• Built dashboards in a data playground to grant users access to important data',
+                    '• Formed documentation to show users how to utilise and access the collected data.']}
+                    imglink='https://animalhealthmetrics.org/'
+                />
+                <Job 
+                    comp='Deloitte'
+                    title='IT Co-op - Data Centre Services'
+                    year='May 2021 - Aug 2021'
+                    desc={[
+                    '• Developed programs to gather data from servers to measure KPIs for upper management.',
                     '• Worked with Deloitte Datacenter Services to manage thousands of virtual machines.',
-                    '• Joined an operations team to deploy VMs, troubleshoot servers, and delegate work.',
-                    '• Developed scripts to gather data from VMs to measure KPIs for upper management.',
+                    '• Delegated tasks to other teams and co-workers as part of an operations team.',
                     '• Engaged with the Deloitte Networks team to learn about enterprise networking.',
                     '• Assisted team members in building/racking servers in the data centers.']}
                     img='DeloitteLogo.png'
@@ -114,7 +110,7 @@ function About() {
                 <Job 
                     comp='Going Ductless'
                     title='HVAC Apprentice'
-                    year='2017-2020'
+                    year='June 2017 - Aug 2020'
                     desc={[
                         '• Developed effective communication skills and worked well in a team setting.',
                         '• Trained new employees up to organized and efficient company standards.',
