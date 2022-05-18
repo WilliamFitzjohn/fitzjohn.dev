@@ -5,16 +5,27 @@
     text-align: left;
     font-size: 4rem;
     font-weight: 300;
+    width: 95%;
 }
 .router-section div{
     margin-bottom: -0.75rem;
     transition: ease-in-out 0.25s;
+    display: flex;
+    width: 100%;
 }
-.router-section div:hover{
+.router-section div.unselectable:hover{
     color:var(--highlight-colour);
 }
+.router-section a{
+    text-decoration: none;
+    color: inherit;
+}
 
-@media only screen and (max-height: 404px) {
+.link-icon{
+    margin-top: 13px;
+}
+
+@media only screen and (max-height: 510px) {
     .router-section{
         bottom:auto;
     }
@@ -22,5 +33,10 @@
 @media only screen and (max-width: 768px) {
     .router-section{
         font-size: 5rem;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .router-section{
+        width: 90%;
     }
 }

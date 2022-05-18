@@ -1,6 +1,7 @@
 import './styles/Home.css'
 import './styles/Common.css'
 import { Container } from 'react-bootstrap';
+import { BsLinkedin,BsGithub } from 'react-icons/bs';
 
 function Home() {
 
@@ -47,9 +48,21 @@ function Home() {
                 <h2>William Fitzjohn</h2>
             </section>
             <section className='router-section'>
-                <div className='unselectable' onClick={onDivClick} id='Projects'>Projects</div>
-                <div className='unselectable' onClick={onDivClick} id='About'>About</div>
-                <div className='unselectable' onClick={onDivClick} id='Resume'>Resume</div>
+                <div>
+                    <div className='unselectable' onClick={onDivClick} id='Projects'>Projects</div>
+                </div>
+                <div>
+                    <div className='unselectable' onClick={onDivClick} id='About'>About</div>
+                    <a href='https://www.github.com/WilliamFitzjohn' target='_black'>
+                        <div className='unselectable link-icon'><BsGithub/></div>
+                    </a>
+                </div>
+                <div>
+                    <div className='unselectable' onClick={onDivClick} id='Resume'>Resume</div>
+                    <a href='https://www.linkedin.com/in/WilliamFitzjohn' target='_black'>
+                        <div className='unselectable link-icon'><BsLinkedin/></div>
+                    </a>
+                </div>
             </section>
             <section className='bg-section unselectable'>
                 <h1>Creator</h1>
