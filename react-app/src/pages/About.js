@@ -45,7 +45,7 @@ function About() {
     return (
         <Container className='body-container'>
             <section className='title-section'>
-                <div onClick={backClick}>
+                <div onClick={backClick} className='clickable'>
                     <BsBoxArrowInLeft/>
                     <p className='unselectable'>Back</p>
                 </div>
@@ -80,7 +80,8 @@ function About() {
                     title='IT Co-op - Solutions Delivery'
                     year='May 2022 - Current'
                     desc={[
-                    '• Creating automated chat-bots to aid users with a variety of tasks.']}
+                    '• Working on the RPA team to create automations to save employees hundreds of hours.',
+                    '• Overseeing the development lifecycle and creating important documentation to support the dev team']}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />

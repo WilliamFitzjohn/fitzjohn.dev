@@ -34,16 +34,23 @@ function Job(props) {
 
     function getChevron(){
         if(dropdown){
-            return(<BsChevronUp/>);
+            return(<BsChevronDown className='job-chevron-selected'/>);
         }else{
             return(<BsChevronDown/>);
         }
     }
 
+    function getDropdownClasses(){
+        if(dropdown){
+            return 'job-dropdown-container job-dropdown-container-selected';
+        }else{
+            return 'job-dropdown-container'
+        }
+    }
+
     function getDropdown(){
-        if(!dropdown){return null}
         return(
-            <div className='job-dropdown-container'>
+            <div className={getDropdownClasses()}>
                 {getImg()}
                 <div className='job-desc-container'>
                     {getDesc()}
@@ -54,7 +61,7 @@ function Job(props) {
 
     return(
         <div className="job-container">
-            <div className="job-header" onClick={toggleMenu}>
+            <div className="job-header clickable" onClick={toggleMenu}>
                 <div className="job-title-left">
                     <h2>{props.comp}</h2>
                     <h2>{props.title}</h2>

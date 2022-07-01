@@ -43,7 +43,7 @@ function Resume() {
     return (
         <Container className='body-container'>
             <section className='title-section'>
-                <div onClick={backClick}>
+                <div onClick={backClick} className='clickable'>
                     <BsBoxArrowInLeft/>
                     <p className='unselectable'>Back</p>
                 </div>

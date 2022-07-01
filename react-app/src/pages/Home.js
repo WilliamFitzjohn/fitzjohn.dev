@@ -48,19 +48,21 @@ function Home() {
                 <h2>William Fitzjohn</h2>
             </section>
             <section className='router-section'>
-                <div>
-                    <div className='unselectable' onClick={onDivClick} id='Projects'>Projects</div>
+                <div className='router-section-div'>
+                    <div className='unselectable clickable' onClick={onDivClick} style={{width:'auto'}} id='Projects'>Projects</div>
                 </div>
-                <div>
-                    <div className='unselectable' onClick={onDivClick} id='About'>About</div>
+                <div className='router-section-div'>
+                    <div className='unselectable clickable' onClick={onDivClick} style={{width:'auto'}} id='About'>About</div>
+                    <div></div>
                     <a href='https://www.github.com/WilliamFitzjohn' target='_black'>
-                        <div className='unselectable link-icon'><BsGithub/></div>
+                        <div className='unselectable clickable link-icon'><BsGithub/></div>
                     </a>
                 </div>
-                <div>
-                    <div className='unselectable' onClick={onDivClick} id='Resume'>Resume</div>
+                <div className='router-section-div'>
+                    <div className='unselectable clickable' onClick={onDivClick} style={{width:'auto'}} id='Resume'>Resume</div>
+                    <div></div>
                     <a href='https://www.linkedin.com/in/WilliamFitzjohn' target='_black'>
-                        <div className='unselectable link-icon'><BsLinkedin/></div>
+                        <div className='unselectable clickable link-icon'><BsLinkedin/></div>
                     </a>
                 </div>
             </section>

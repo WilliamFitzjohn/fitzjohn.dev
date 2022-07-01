@@ -36,19 +36,28 @@
     font-weight: 300;
 }
 .job-title-right svg{
+    transition: 0.5s;
     height: 100%;
     width: 2rem;
 }
+.job-chevron-selected{
+    transform: rotate3d(1,0,0,180deg);
+}
 .job-dropdown-container{
+    transition: 0.3s ease-in-out;
     display: flex;
     background-color: var(--secondary-bg-color);
     background-color: #272727;
     width: 100%;
-    height: auto;
+    height: 0;
     margin: 0;
-    padding: 1rem;
+    padding: 0 1rem;
     top: 0;
     align-items: center;
+    overflow: hidden;
+}
+.job-dropdown-container-selected{
+    height: 12rem;
 }
 .job-desc-container{
     padding: 0 1rem 0 2rem;
