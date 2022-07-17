@@ -85,7 +85,7 @@ function Projects() {
                 />
                 <Project 
                     img='GroveLogo.png'
-                    name='Yough Wellness App'
+                    name='Youth Wellness App'
                     tools='Figma'
                     desc='Lead a design team to gather requirements from a client and create a high fidelity prototype for a mobile app targeted at a young audience.'
                     link='https://www.figma.com/file/WFZ6smd6tG8umbb02EZVqB/'
