@@ -62,11 +62,11 @@ function Job(props) {
     return(
         <div className="job-container">
             <div className="job-header clickable" onClick={toggleMenu}>
-                <div className="job-title-left">
+                <div className="job-title-left unselectable">
                     <h2>{props.comp}</h2>
                     <h2>{props.title}</h2>
                 </div>
-                <div className="job-title-right">
+                <div className="job-title-right unselectable">
                     <h2>{props.year}</h2>
                     {getChevron()}
                 </div>

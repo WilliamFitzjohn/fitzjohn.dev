@@ -57,7 +57,7 @@
     overflow: hidden;
 }
 .job-dropdown-container-selected{
-    height: 12rem;
+    height: 9rem;
 }
 .job-desc-container{
     padding: 0 1rem 0 2rem;
@@ -67,7 +67,7 @@
     margin: 0;
 }
 .job-image{
-    height: 10rem;
+    height: 7rem;
     transition: ease-in-out 0.25s;
     filter: grayscale();
 }
