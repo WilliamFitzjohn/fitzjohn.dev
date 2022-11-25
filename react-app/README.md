@@ -5,3 +5,5 @@
 
 ### Deployment
 `npm run deploy` To deploy to GitHub pages
+
+Font: Lato Black-Italic
