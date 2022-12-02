@@ -61,7 +61,7 @@ function About() {
                 <div className='about-me-desc'>
                     <div>
                         <h3>Hello, I'm William</h3>
-                        <p>I’m an English software developer and I love to take pride in my work. My short-term goal is to land a position in machine learning/AI. Soon I'll graduate from university where I will continue to grow my career. In my free time I play games, hangout with friends, and work on side projects.</p>
+                        <p>I’m an English software developer and I love to take pride in my work. My long term goal is to have an exciting career in software development. Soon I'll graduate from university where I will continue to grow my career. In my free time I play games, hangout with friends, and work on side projects.</p>
                     </div>
                     <div className='degree-container'>
                         <img alt='University of Guelph' src='./imgs/UOGLogo.png'/>
@@ -76,14 +76,14 @@ function About() {
             <section className='career-container'>
                 <h1>Career</h1>
                 <Job 
-                    comp='Ontario Veterinary College'
+                    comp='Global Burden of Animal Diseases'
                     title='Software Developer'
                     year='April 2022 - Current'
                     desc={[
                         '• Designing and producing front-end Plotly dashboards for visualizing live-stock data.',
                         '• Deploying Python back-ends on Amazon Web Services connected to public APIs.',
                         '• Refactoring existing software to be used in R Studio to expand analysts\' tool-kits.']}
-                    img='OVCLogo.jpg'
+                    img='GBADsLogo.jfif'
                     imglink='https://animalhealthmetrics.org/'
                 />
                 <Job 
