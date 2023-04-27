@@ -76,13 +76,34 @@ function About() {
             <section className='career-container'>
                 <h1>Career</h1>
                 <Job 
+                    comp='Bell'
+                    title='Developer, Cloud Engineering'
+                    year='Apr 2023 - Current'
+                    desc={[
+                        '• Automating cloud workflows to reduce incident response time.',
+                        ]}
+                    img='BellLogo.jpg'
+                    imglink='https://www.bell.ca/'
+                />
+                <Job 
+                    comp='Flex Consulting Services'
+                    title='Co-Founder'
+                    year='Jan 2023 - Current'
+                    desc={[
+                        '• Supplying clients with high quality software.',
+                        ]}
+                    img='FlexLogoWhite492.png'
+                    imglink='https://flexconsulting.ca/'
+                />
+                <Job 
                     comp='Global Burden of Animal Diseases'
                     title='Software Developer'
-                    year='April 2022 - Current'
+                    year='Apr 2022 - Apr 2023'
                     desc={[
-                        '• Designing and producing front-end Plotly dashboards for visualizing live-stock data.',
-                        '• Deploying Python back-ends on Amazon Web Services connected to public APIs.',
-                        '• Refactoring existing software to be used in R Studio to expand analysts\' tool-kits.']}
+                        '• Managed the software development life cycle by designing 10+ Git CI/CD pipelines to streamline development.',
+                        '• Built AWS infrastructure to support high-traffic web applications, utilized ECS and Load Balancers to deploy Docker containers, resulting in a reliable and scalable website infrastructure.',
+                        '• Developed cloud-based analytical dashboards for visualizing data to monitor KPI\'s.',
+                    ]}
                     img='GBADsLogo.jfif'
                     imglink='https://animalhealthmetrics.org/'
                 />
@@ -113,7 +134,7 @@ function About() {
                 <Job 
                     comp='Going Ductless'
                     title='HVAC Apprentice'
-                    year='June 2017 - Aug 2020'
+                    year='Jun 2017 - Aug 2020'
                     desc={[
                         '• Developed effective communication skills and worked well in a team setting.',
                         '• Trained new employees up to organized and efficient company standards.',
