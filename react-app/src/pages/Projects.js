@@ -57,6 +57,19 @@ function Projects() {
             </section>
             <section className='content-container projects-container'>
                 <Project 
+                    img='fitzjohnweddings.png'
+                    name='Fitzjohn Weddings'
+                    tools='Svelte, Nginx, Docker, Amazon S3'
+                    desc='A wedding website hosting service with templates and configuration files.'
+                    />
+                <Project 
+                    img='RFP_Gator_Logo.jpg'
+                    name='RFP Gator'
+                    tools='React, PocketBase, PlayWright, Docker'
+                    desc='An RFP aggregation platform for monitoring canadian university projects.'
+                    link='https://rfpgator.fitzjohn.dev/'
+                    />
+                <Project 
                     img='TwitchAlertLogo.png'
                     name='TwitchAlert'
                     tools='Twitch API, Node.js'

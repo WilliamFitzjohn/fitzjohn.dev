@@ -1,8 +1,11 @@
+
 import './styles/About.css'
 import './styles/Common.css'
 import { Container } from 'react-bootstrap';
 import { BsBoxArrowInLeft } from 'react-icons/bs';
 import Job from '../components/Job'
+import Certification from '../components/Certification'
+import { useEffect } from 'react';
 
 function About() {
     
@@ -42,6 +45,90 @@ function About() {
         }, 500);
     }
 
+    // Flashlight effect for profile image
+    useEffect(() => {
+        const img = document.getElementById('about-me-img');
+        const canvas = document.getElementById('me-flashlight-canvas');
+        if (!img || !canvas) return;
+
+        let ctx = canvas.getContext('2d');
+        let imgObj = new window.Image();
+        imgObj.src = img.src;
+
+        function resizeCanvas() {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            canvas.style.width = img.width + 'px';
+            canvas.style.height = img.height + 'px';
+        }
+
+        // Draw a blurred flashlight using a radial gradient alpha mask
+        function drawFlashlight(x, y, radius = 90, blur = 20) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Draw the color image
+            ctx.save();
+            ctx.drawImage(imgObj, 0, 0, canvas.width, canvas.height);
+            // Create a radial gradient alpha mask
+            let grad = ctx.createRadialGradient(x, y, Math.max(1, radius - blur), x, y, radius);
+            grad.addColorStop(0, 'rgba(0,0,0,1)');
+            grad.addColorStop(1, 'rgba(0,0,0,0)');
+            // Draw the mask
+            ctx.globalCompositeOperation = 'destination-in';
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.fillStyle = grad;
+            ctx.fill();
+            ctx.globalCompositeOperation = 'destination-over';
+            // Draw grayscale image underneath
+            ctx.filter = 'grayscale(1)';
+            ctx.drawImage(imgObj, 0, 0, canvas.width, canvas.height);
+            ctx.filter = 'none';
+            ctx.restore();
+        }
+
+        function handleMove(e) {
+            const rect = img.getBoundingClientRect();
+            let x, y;
+            if (e.touches && e.touches.length) {
+                x = e.touches[0].clientX - rect.left;
+                y = e.touches[0].clientY - rect.top;
+            } else {
+                x = e.clientX - rect.left;
+                y = e.clientY - rect.top;
+            }
+            drawFlashlight(x, y);
+        }
+
+        function handleLeave() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function setup() {
+            resizeCanvas();
+            img.addEventListener('mousemove', handleMove);
+            img.addEventListener('mouseleave', handleLeave);
+            img.addEventListener('touchmove', handleMove);
+            img.addEventListener('touchend', handleLeave);
+        }
+
+        if (img.complete) {
+            setup();
+        } else {
+            img.onload = setup;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        return () => {
+            img.removeEventListener('mousemove', handleMove);
+            img.removeEventListener('mouseleave', handleLeave);
+            img.removeEventListener('touchmove', handleMove);
+            img.removeEventListener('touchend', handleLeave);
+            window.removeEventListener('resize', resizeCanvas);
+        };
+    }, []);
+
     return (
         <Container className='body-container'>
             <section className='title-section'>
@@ -57,11 +144,24 @@ function About() {
                 <h1>Developer</h1>
             </section>
             <section className='about-me-container'>
-                <img className='me unselectabe' alt="It's me!" src='./imgs/Me.JPG'></img>
+                <div className='me-img-container'>
+                    <img
+                        className='me unselectabe'
+                        alt="It's me!"
+                        src='./imgs/Me.JPG'
+                        id='about-me-img'
+                        style={{ display: 'block' }}
+                    />
+                    <canvas
+                        id='me-flashlight-canvas'
+                        className='me-flashlight-canvas'
+                        style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none' }}
+                    />
+                </div>
                 <div className='about-me-desc'>
                     <div>
                         <h3>Hello, I'm William</h3>
-                        <p>I’m an English software developer and I love to take pride in my work. My long term goal is to have an exciting career in software development. Soon I'll graduate from university where I will continue to grow my career. In my free time I play games, hangout with friends, and work on side projects.</p>
+                        <p>I’m an English-Canadian Solutions Architect & Software Developer and I love to take pride in my work. My long term goal is to have an exciting career in cloud engineering. I've gained a breadth of experience by owning a business, working in various software development roles, and collaborating on innovative projects. At home, I enjoy tinkering with my homelab.</p>
                     </div>
                     <div className='degree-container'>
                         <img alt='University of Guelph' src='./imgs/UOGLogo.png'/>
@@ -73,24 +173,29 @@ function About() {
                     </div>
                 </div>
             </section>
-            <section className='career-container'>
+            <section className='career-container pb-4'>
                 <h1>Career</h1>
                 <Job 
                     comp='Bell'
                     title='Developer, Cloud Engineering'
                     year='Apr 2023 - Current'
                     desc={[
-                        '• Automating cloud workflows to reduce incident response time.',
+                        '• Reduced troubleshooting labour by +2,000 hours per month by leading frontend development for a custom automation platform, streamlining network diagnostics and repairs.',
+                        '• Improved disaster recovery time by 98% with autoscaling network appliances on Google Cloud through Terraform.',
+                        '• Architected observability platforms using Vue3, FastAPI, MongoDB, Redis, and Kafka, increasing cloud visibilty.',
+                        '• Championed agile frameworks as a Scrum Master, leading my team through Scrum ceremonies in Jira & Miro.',
                         ]}
                     img='BellLogo.jpg'
                     imglink='https://www.bell.ca/'
                 />
                 <Job 
-                    comp='Flex Consulting Services'
+                    comp='Flex Consulting Solutions'
                     title='Co-Founder'
                     year='Jan 2023 - Current'
                     desc={[
-                        '• Supplying clients with high quality software.',
+                        '• Launched a cloud solutions company, securing $---K in year 1 by strategically focusing on grant-funded projects.',
+                        '• Led end-to-end development for a portfolio of 25+ cloud applications, scaling usage to 1,000+ monthly users.',
+                        '• Product owner for AWS Infrastructure, orchestrating the hosting environment for globally accessible microservices, including Python/Java APIs, Databases, and Web Apps.',
                         ]}
                     img='FlexLogoWhite492.png'
                     imglink='https://flexconsulting.ca/'
@@ -100,34 +205,35 @@ function About() {
                     title='Software Developer'
                     year='Apr 2022 - Apr 2023'
                     desc={[
-                        '• Managed the software development life cycle by designing 10+ Git CI/CD pipelines to streamline development.',
-                        '• Built AWS infrastructure to support high-traffic web applications, utilized ECS and Load Balancers to deploy Docker containers, resulting in a reliable and scalable website infrastructure.',
-                        '• Developed cloud-based analytical dashboards for visualizing data to monitor KPI\'s.',
+                        '• Aided in securing \$5M from the Bill \& Melinda Gates Foundation with a modern Public Cloud architecture.',
+                        '• Reduced AWS costs by 60\% by implementing cloud observability standards, monitoring, and alarming.',
+                        '• Managed DevOps with 20+ CI/CD pipelines to automate end-to-end deployments leveraging Docker containers.',
+                        '• Migrated to Infrastructure as Code using Terraform and CloudFormation to provision ECS, EC2, S3, and RDS.',
                     ]}
-                    img='GBADsLogo.jfif'
+                    img='GBADsLogo.jpg'
                     imglink='https://animalhealthmetrics.org/'
                 />
                 <Job 
                     comp='Deloitte'
-                    title='IT Co-op - Solutions Delivery'
+                    title='IT Co-op - Intelligent Automation CoE'
                     year='May 2022 - Aug 2022'
                     desc={[
-                    '• Supported management on 5+ projects resulting in time savings of ~$2300 hours of labour-intense work annually.',
-                    '• Leveraged automations to reduce bottle-necks in business pipelines, resulting in time-savings and less down-time.',
-                    '• Assisted in the architecture and design of robotic processes with a focus on reliability using best practices.']}
+                        '• Automated ~2300 hours of labor-intense work by developing 5+ RPA automations for administrative tasks.',
+                        '• Assisted in the architecture and documentation of robotic processes with a focus on reliability using best practices.',
+                        '• Leveraged automations to reduce bottle-necks in business pipelines, resulting in time-savings and less down-time.',
+                    ]}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />
                 <Job 
                     comp='Deloitte'
-                    title='IT Co-op - Data Centre Services'
+                    title='IT Co-op - Technology & Infrastructure'
                     year='May 2021 - Aug 2021'
                     desc={[
-                    '• Developed software to monitor 1000s of VMs (Virtual Machines) to deliver KPIs for management.',
-                    '• Collaborated with Deloitte Data Centre Services to oversee 100s of servers, supporting client-facing service lines.',
-                    '• Delegated tasks to other teams and co-workers as part of an operations team.',
-                    '• Engaged with the Deloitte Networks team to learn about enterprise networking.',
-                    '• Assisted team members in building/racking servers in the data centers.']}
+                        '• Improved cloud observability on 2000+ machines by PowerShell monitoring software to collect KPIs.',
+                        '• Provisioned physical infrastructure in the data centers and administrated Windows & Linux systems on VMWare.',
+                        '• Developed a solid understanding of Linux servers, commands, troubleshooting, and administration.'
+                    ]}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />
@@ -136,12 +242,39 @@ function About() {
                     title='HVAC Apprentice'
                     year='Jun 2017 - Aug 2020'
                     desc={[
+                        '• Worked with a team to install heating and cooling in server rooms, offices, machine rooms and more.',
                         '• Developed effective communication skills and worked well in a team setting.',
                         '• Trained new employees up to organized and efficient company standards.',
-                        '• Worked with a team to install heating and cooling in server rooms, offices, machine rooms and more.']}
+                    ]}
                     img='GDLogoBlue.png'
                     imglink='https://www.goingductless.ca'
                     />
+            </section>
+            <section className='career-container pm-1'>
+                <h1>Certifications</h1>
+                <Certification 
+                    org='Amazon Web Services'
+                    title='Solutions Architect - Associate'
+                    date='July 2025'
+                    url='https://cp.certmetrics.com/amazon/en/public/verify/credential/a6f07696b33e4fa2aa05ad5982e251c5'
+                />
+                <Certification 
+                    org='ISED Canada'
+                    title='Amateur Radio Operator - Basic with Honours'
+                    date='March 2024'
+                    url='https://apc-cap.ic.gc.ca/pls/apc_anon/query_amat_cs$callsign.QueryViewByKey?P_CALLSIGN=VA3TTB&Z_CHK=60341'
+                />
+                <Certification 
+                    org='Amazon Web Services'
+                    title='Cloud Practitioner'
+                    date='January 2024'
+                    url='https://cp.certmetrics.com/amazon/en/public/verify/credential/d73f239470d4488ea5d9c44796198bca'
+                />
+                <Certification 
+                    org='UiPath'
+                    title='RPA Developer Foundation'
+                    date='May 2022'
+                />
             </section>
         </Container>
     );
