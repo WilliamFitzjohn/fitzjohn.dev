@@ -25,6 +25,7 @@
     filter: grayscale(1);
     display: block;
     user-select: none;
+    cursor: zoom-in;
 }
 .me-flashlight-canvas {
     position: absolute;
