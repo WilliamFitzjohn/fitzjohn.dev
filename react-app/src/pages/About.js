@@ -176,13 +176,25 @@ function About() {
             <section className='career-container pb-4'>
                 <h1>Career</h1>
                 <Job 
+                    comp='Manulife'
+                    title='Cloud Engineer'
+                    year='January 2026 - Current'
+                    desc={[
+                        '• Engineering...',
+                        '• Building...',
+                        '• Designing...'
+                        ]}
+                    img='ManulifeLogo.svg'
+                    imglink='https://www.manulife.ca//'
+                />
+                <Job 
                     comp='Bell'
                     title='Developer, Cloud Engineering'
-                    year='Apr 2023 - Current'
+                    year='Apr 2023 - January 2026'
                     desc={[
-                        '• Reduced troubleshooting labour by +2,000 hours per month by leading frontend development for a custom automation platform, streamlining network diagnostics and repairs.',
                         '• Improved disaster recovery time by 98% with autoscaling network appliances on Google Cloud through Terraform.',
                         '• Architected observability platforms using Vue3, FastAPI, MongoDB, Redis, and Kafka, increasing cloud visibilty.',
+                        '• Reduced troubleshooting labour by +2,000 hours per month by leading frontend development for a custom automation platform, streamlining network diagnostics and repairs.',
                         '• Championed agile frameworks as a Scrum Master, leading my team through Scrum ceremonies in Jira & Miro.',
                         ]}
                     img='BellLogo.jpg'
@@ -191,7 +203,7 @@ function About() {
                 <Job 
                     comp='Flex Consulting Solutions'
                     title='Co-Founder'
-                    year='Jan 2023 - Current'
+                    year='Jan 2023 - August 2025'
                     desc={[
                         '• Launched a cloud solutions company, securing $---K in year 1 by strategically focusing on grant-funded projects.',
                         '• Led end-to-end development for a portfolio of 25+ cloud applications, scaling usage to 1,000+ monthly users.',
