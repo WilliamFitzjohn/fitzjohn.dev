@@ -4,6 +4,7 @@ import './styles/Common.css'
 import { Container } from 'react-bootstrap';
 import { BsBoxArrowInLeft } from 'react-icons/bs';
 import Job from '../components/Job'
+import CareerTimeline from '../components/CareerTimeline'
 import Certification from '../components/Certification'
 import { useEffect } from 'react';
 
@@ -175,6 +176,50 @@ function About() {
             </section>
             <section className='career-container pb-4'>
                 <h1>Career</h1>
+                <CareerTimeline jobs={[
+                    {
+                        comp: 'Manulife',
+                        title: 'Cloud Engineer',
+                        year: 'January 2026 - Current',
+                        img: 'ManulifeLogo.svg',
+                        imglink: 'https://www.manulife.ca//'
+                    },
+                    {
+                        comp: 'Bell',
+                        title: 'Software Developer, Cloud Engineering',
+                        year: 'Apr 2023 - January 2026',
+                        img: 'BellLogo.jpg',
+                        imglink: 'https://www.bell.ca/'
+                    },
+                    {
+                        comp: 'Flex Consulting Solutions',
+                        title: 'Co-Founder',
+                        year: 'Jan 2023 - August 2024',
+                        img: 'FlexLogoWhite492.png',
+                        imglink: 'https://flexconsulting.ca/'
+                    },
+                    {
+                        comp: 'GBADs Informatics',
+                        title: 'Software Developer',
+                        year: 'Apr 2022 - Apr 2023',
+                        img: 'GBADsLogo.jpg',
+                        imglink: 'https://animalhealthmetrics.org/'
+                    },
+                    {
+                        comp: 'Deloitte',
+                        title: 'IT Co-op - Intelligent Automation',
+                        year: 'May 2022 - Aug 2022',
+                        img: 'DeloitteLogo.png',
+                        imglink: 'https://www2.deloitte.com/ca/en.html'
+                    },
+                    {
+                        comp: 'Deloitte',
+                        title: 'IT Co-op - Technology & Infrastructure',
+                        year: 'May 2021 - Aug 2021',
+                        img: 'DeloitteLogo.png',
+                        imglink: 'https://www2.deloitte.com/ca/en.html'
+                    }
+                ]} />
                 <Job 
                     comp='Manulife'
                     title='Cloud Engineer'
@@ -189,26 +234,33 @@ function About() {
                 />
                 <Job 
                     comp='Bell'
-                    title='Developer, Cloud Engineering'
+                    title='Software Developer, Cloud Engineering'
                     year='Apr 2023 - January 2026'
+                    location='Waterloo, ON'
+                    type='Full-time'
                     desc={[
-                        '• Improved disaster recovery time by 98% with autoscaling network appliances on Google Cloud through Terraform.',
-                        '• Architected observability platforms using Vue3, FastAPI, MongoDB, Redis, and Kafka, increasing cloud visibilty.',
-                        '• Reduced troubleshooting labour by +2,000 hours per month by leading frontend development for a custom automation platform, streamlining network diagnostics and repairs.',
+                        '• Reduced troubleshooting labor by +2,000 hours per month by leading front-end development for a custom mission-critical automation and monitoring platform, streamlining network diagnostics and repairs.',
+                        '• Improved disaster recovery time by 98% with auto-scaling fastweb proxies on GCP through Terraform.',
+                        '• Reclaimed $500k of hardware by building real-time Cisco Telemetry data pipelines in On-Prem environments.',
+                        '• Architected fault detection platforms using Vue3, FastAPI, Redis, and Kafka, increasing system visibility.',
                         '• Championed agile frameworks as a Scrum Master, leading my team through Scrum ceremonies in Jira & Miro.',
                         ]}
+                    skills={['Vue.js', 'FastAPI', 'Redis', 'Kafka', 'Terraform', 'GCP', 'Cisco', 'Python', 'JavaScript', 'Agile/Scrum', 'Jira', 'Miro']}
                     img='BellLogo.jpg'
                     imglink='https://www.bell.ca/'
                 />
                 <Job 
                     comp='Flex Consulting Solutions'
                     title='Co-Founder'
-                    year='Jan 2023 - August 2025'
+                    year='Jan 2023 - August 2024'
+                    location='Guelph, ON'
+                    type='Full-time'
                     desc={[
                         '• Launched a cloud solutions company, securing $---K in year 1 by strategically focusing on grant-funded projects.',
                         '• Led end-to-end development for a portfolio of 25+ cloud applications, scaling usage to 1,000+ monthly users.',
-                        '• Product owner for AWS Infrastructure, orchestrating the hosting environment for globally accessible microservices, including Python/Java APIs, Databases, and Web Apps.',
+                        '• Product owner for AWS Infrastructure-as-Code environments (Terraform/CloudFormation), orchestrating the hosting environment for globally accessible Python/Java APIs, RDS databases, and React/Typescript Web Apps.',
                         ]}
+                    skills={['AWS', 'Terraform', 'CloudFormation', 'Python', 'Java', 'React', 'TypeScript', 'RDS', 'IaC']}
                     img='FlexLogoWhite492.png'
                     imglink='https://flexconsulting.ca/'
                 />
@@ -216,12 +268,15 @@ function About() {
                     comp='Global Burden of Animal Diseases'
                     title='Software Developer'
                     year='Apr 2022 - Apr 2023'
+                    location='Guelph, ON'
+                    type='Full-time'
                     desc={[
-                        '• Aided in securing \$5M from the Bill \& Melinda Gates Foundation with a modern Public Cloud architecture.',
-                        '• Reduced AWS costs by 60\% by implementing cloud observability standards, monitoring, and alarming.',
-                        '• Managed DevOps with 20+ CI/CD pipelines to automate end-to-end deployments leveraging Docker containers.',
+                        '• Reduced AWS costs by 60% by implementing cloud observability standards, monitoring, and alarming.',
+                        '• Aided in securing $5M from the Bill & Melinda Gates Foundation with a modern Public Cloud architecture.',
                         '• Migrated to Infrastructure as Code using Terraform and CloudFormation to provision ECS, EC2, S3, and RDS.',
+                        '• Managed DevOps with 20+ CI/CD pipelines to automate end-to-end deployments leveraging Docker containers.',
                     ]}
+                    skills={['AWS', 'Terraform', 'CloudFormation', 'ECS', 'EC2', 'S3', 'RDS', 'Docker', 'CI/CD', 'DevOps']}
                     img='GBADsLogo.jpg'
                     imglink='https://animalhealthmetrics.org/'
                 />
@@ -229,11 +284,14 @@ function About() {
                     comp='Deloitte'
                     title='IT Co-op - Intelligent Automation CoE'
                     year='May 2022 - Aug 2022'
+                    location='Toronto, ON'
+                    type='Co-op'
                     desc={[
-                        '• Automated ~2300 hours of labor-intense work by developing 5+ RPA automations for administrative tasks.',
+                        '• Automated ∼2300 hours of labor-intense work by developing 5+ RPA automations for administrative tasks.',
                         '• Assisted in the architecture and documentation of robotic processes with a focus on reliability using best practices.',
                         '• Leveraged automations to reduce bottle-necks in business pipelines, resulting in time-savings and less down-time.',
                     ]}
+                    skills={['RPA', 'UiPath', 'Process Automation', 'Python']}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />
@@ -241,11 +299,13 @@ function About() {
                     comp='Deloitte'
                     title='IT Co-op - Technology & Infrastructure'
                     year='May 2021 - Aug 2021'
+                    location='Toronto, ON'
+                    type='Co-op'
                     desc={[
                         '• Improved cloud observability on 2000+ machines by PowerShell monitoring software to collect KPIs.',
                         '• Provisioned physical infrastructure in the data centers and administrated Windows & Linux systems on VMWare.',
-                        '• Developed a solid understanding of Linux servers, commands, troubleshooting, and administration.'
                     ]}
+                    skills={['PowerShell', 'VMWare', 'Windows', 'Linux', 'Cloud Monitoring']}
                     img='DeloitteLogo.png'
                     imglink='https://www2.deloitte.com/ca/en.html'
                     />

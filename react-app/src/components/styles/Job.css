@@ -44,40 +44,132 @@
     transform: rotate3d(1,0,0,180deg);
 }
 .job-dropdown-container{
-    transition: 0.3s ease-in-out;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.3s ease-in-out;
     display: flex;
-    background-color: var(--secondary-bg-color);
-    background-color: #272727;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #2a2a2a 0%, #272727 100%);
     width: 100%;
-    height: 0;
+    max-height: 0;
     margin: 0;
-    padding: 0 1rem;
-    top: 0;
-    align-items: center;
+    padding: 0 1.5rem;
     overflow: hidden;
+    opacity: 0;
+    border-left: 3px solid transparent;
 }
 .job-dropdown-container-selected{
-    height: 9rem;
+    max-height: 800px;
+    padding: 1.5rem;
+    opacity: 1;
+    border-left: 3px solid var(--highlight-colour);
+}
+.job-dropdown-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 200px;
+    align-items: flex-start;
+}
+.job-dropdown-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 .job-desc-container{
-    padding: 0 1rem 0 2rem;
+    padding: 0;
 }
 .job-desc-li{
     padding: 0;
-    margin: 0;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: #e0e0e0;
 }
 .job-image{
-    height: 7rem;
-    transition: ease-in-out 0.25s;
-    filter: grayscale();
+    height: 8rem;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: grayscale(0.3) brightness(0.9);
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .job-image:hover{
-    filter:none;
+    filter: none;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.job-metadata{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+.job-metadata-item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+.job-metadata-item svg{
+    color: var(--highlight-colour);
+    font-size: 1.1rem;
+}
+.job-skills-section{
+    margin-top: 0;
+}
+.job-skills-section h4{
+    margin: 0 0 0.6rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--highlight-colour);
+}
+.job-skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.job-skill-badge{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.job-skill-badge:hover{
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--highlight-colour);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 768px) {
+    .job-dropdown-container{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .job-dropdown-left{
+        width: 100%;
+        min-width: unset;
+        align-items: center;
+    }
     .job-image{
-        height: 7rem;
+        height: 6rem;
+        max-width: 150px;
+    }
+    .job-dropdown-container-selected{
+        padding: 1.5rem 1rem;
+    }
+    .job-metadata{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 

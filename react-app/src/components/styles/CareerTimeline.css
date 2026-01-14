@@ -1,0 +1,182 @@
+.career-timeline-container {
+    width: 100%;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.timeline-track {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--highlight-colour) 0%, rgba(255,255,255,0.2) 50%, var(--highlight-colour) 100%);
+    z-index: 0;
+}
+
+.timeline-secondary-line {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.15) 100%);
+    z-index: 0;
+}
+
+.timeline-year-marker {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-year-gridline {
+    width: 1px;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.3);
+    margin: 0 auto;
+}
+
+.timeline-year-label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #808080;
+    white-space: nowrap;
+    padding-top: 4px;
+}
+
+.timeline-job {
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.timeline-job-narrow {
+    min-width: 80px;
+}
+
+.timeline-job-bar {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border: 2px solid var(--highlight-colour);
+    border-radius: 8px;
+    padding: 0.75rem;
+    height: 80px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.timeline-job-bar:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--highlight-colour);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+}
+
+.timeline-job-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.timeline-job-narrow .timeline-job-content {
+    justify-content: center;
+    gap: 0;
+}
+
+.timeline-logo {
+    height: 50px;
+    width: auto;
+    max-width: 60px;
+    object-fit: contain;
+    filter: brightness(0.95);
+    transition: filter 0.3s ease;
+}
+
+.timeline-job-bar:hover .timeline-logo {
+    filter: brightness(1.1);
+}
+
+.timeline-job-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.timeline-job-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--highlight-colour);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-job-role {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 1200px) {
+    .timeline-job-info {
+        display: none;
+    }
+    
+    .timeline-job-content {
+        justify-content: center;
+    }
+    
+    .timeline-logo {
+        height: 45px;
+        max-width: 50px;
+    }
+
+    .timeline-job-bar {
+        padding: 0.5rem;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .career-timeline-container {
+        padding: 1.5rem 0;
+    }
+
+    .timeline-year-label {
+        font-size: 0.7rem;
+    }
+
+    .timeline-job {
+        min-width: 50px;
+    }
+
+    .timeline-job-narrow {
+        min-width: 45px;
+    }
+
+    .timeline-logo {
+        height: 35px;
+        max-width: 40px;
+    }
+
+    .timeline-job-bar {
+        padding: 0.3rem;
+        height: 60px;
+    }
+}

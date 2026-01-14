@@ -1,6 +1,8 @@
 
 import './styles/Job.css'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { HiLocationMarker } from 'react-icons/hi';
+import { BiBuildings } from 'react-icons/bi';
 import { useState } from 'react';
 
 function Job(props) {
@@ -32,6 +34,40 @@ function Job(props) {
         });
     }
 
+    function getSkills(){
+        if(!props.skills || props.skills.length === 0){return null}
+        return (
+            <div className='job-skills-section'>
+                <h4>Key Skills & Technologies</h4>
+                <div className='job-skills-container'>
+                    {props.skills.map((skill, index) => (
+                        <span className='job-skill-badge' key={index}>{skill}</span>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
+    function getMetadata(){
+        if(!props.location && !props.type){return null}
+        return (
+            <div className='job-metadata'>
+                {props.location && (
+                    <div className='job-metadata-item'>
+                        <HiLocationMarker />
+                        <span>{props.location}</span>
+                    </div>
+                )}
+                {props.type && (
+                    <div className='job-metadata-item'>
+                        <BiBuildings />
+                        <span>{props.type}</span>
+                    </div>
+                )}
+            </div>
+        );
+    }
+
     function getChevron(){
         if(dropdown){
             return(<BsChevronDown className='job-chevron-selected'/>);
@@ -51,9 +87,15 @@ function Job(props) {
     function getDropdown(){
         return(
             <div className={getDropdownClasses()}>
-                {getImg()}
-                <div className='job-desc-container'>
-                    {getDesc()}
+                <div className='job-dropdown-left'>
+                    {getImg()}
+                    {getMetadata()}
+                </div>
+                <div className='job-dropdown-right'>
+                    <div className='job-desc-container'>
+                        {getDesc()}
+                    </div>
+                    {getSkills()}
                 </div>
             </div>
         );
