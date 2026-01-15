@@ -192,10 +192,10 @@ function About() {
                         imglink: 'https://www.bell.ca/'
                     },
                     {
-                        comp: 'Flex Consulting Solutions',
+                        comp: 'Flex Consulting',
                         title: 'Co-Founder',
                         year: 'Jan 2023 - August 2024',
-                        img: 'FlexLogoWhite492.png',
+                        img: 'flex-logo.svg',
                         imglink: 'https://flexconsulting.ca/'
                     },
                     {
@@ -218,6 +218,13 @@ function About() {
                         year: 'May 2021 - Aug 2021',
                         img: 'DeloitteLogo.png',
                         imglink: 'https://www2.deloitte.com/ca/en.html'
+                    },
+                    {
+                        comp: 'University of Guelph',
+                        title: 'Bachelor of Computing (Honours)',
+                        year: 'March 2021 - May 2023',
+                        img: 'UOGLogo.png',
+                        imglink: 'https://www.uoguelph.ca/'
                     }
                 ]} />
                 <Job 
@@ -250,22 +257,22 @@ function About() {
                     imglink='https://www.bell.ca/'
                 />
                 <Job 
-                    comp='Flex Consulting Solutions'
+                    comp='Flex Consulting'
                     title='Co-Founder'
                     year='Jan 2023 - August 2024'
                     location='Guelph, ON'
-                    type='Full-time'
+                    type='Owner'
                     desc={[
                         '• Launched a cloud solutions company, securing $---K in year 1 by strategically focusing on grant-funded projects.',
                         '• Led end-to-end development for a portfolio of 25+ cloud applications, scaling usage to 1,000+ monthly users.',
                         '• Product owner for AWS Infrastructure-as-Code environments (Terraform/CloudFormation), orchestrating the hosting environment for globally accessible Python/Java APIs, RDS databases, and React/Typescript Web Apps.',
                         ]}
                     skills={['AWS', 'Terraform', 'CloudFormation', 'Python', 'Java', 'React', 'TypeScript', 'RDS', 'IaC']}
-                    img='FlexLogoWhite492.png'
+                    img='flex-logo.svg'
                     imglink='https://flexconsulting.ca/'
                 />
                 <Job 
-                    comp='Global Burden of Animal Diseases'
+                    comp='GBADs Informatics'
                     title='Software Developer'
                     year='Apr 2022 - Apr 2023'
                     location='Guelph, ON'
