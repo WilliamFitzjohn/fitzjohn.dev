@@ -231,13 +231,16 @@ function About() {
                     comp='Manulife'
                     title='Cloud Engineer'
                     year='January 2026 - Current'
+                    location='Waterloo, ON'
+                    type='Full-time'
                     desc={[
-                        '• Engineering...',
-                        '• Building...',
-                        '• Designing...'
+                        '😎 Maximizing shareholder value...',
+                        '🚀 Driving strategic initiatives...',
+                        '📈 Leveraging AI to drive growth...',
                         ]}
+                    skills={['Azure', 'Platform Engineering', 'Terraform', 'Infrastructure Automation', 'Python', 'JavaScript']}
                     img='ManulifeLogo.svg'
-                    imglink='https://www.manulife.ca//'
+                    imglink='https://www.manulife.ca/'
                 />
                 <Job 
                     comp='Bell'
