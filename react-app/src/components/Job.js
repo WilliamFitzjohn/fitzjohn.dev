@@ -1,6 +1,6 @@
 
 import './styles/Job.css'
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { BsChevronDown } from 'react-icons/bs';
 import { HiLocationMarker } from 'react-icons/hi';
 import { BiBuildings } from 'react-icons/bi';
 import { useState } from 'react';
@@ -18,7 +18,7 @@ function Job(props) {
             return null;
         }else{
             return(
-                <a href={props.imglink} target='_black'>
+                <a href={props.imglink} target='_blank' rel='noreferrer'>
                     <img className='job-image unselectable' alt={props.comp} src={'imgs/' + props.img}/>
                 </a>
             );

@@ -4,16 +4,25 @@
     text-align: left;
     background-color: var(--main-bg-color);
     height: 10rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.project-container:hover{
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--highlight-colour) 48%, transparent);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
 }
 
 .project-container img{
     width: 10rem;
     height: 10rem;
     filter: grayscale(100%);
-    transition: ease-in-out 0.2s;
+    transition: filter 0.2s ease, transform 0.2s ease;
 }
 .project-container img:hover{
     filter: none;
+    transform: scale(1.03);
 }
 .project-container div:nth-child(2){
     margin: 0.5rem 1rem;
@@ -26,14 +35,18 @@
     justify-content: space-between;
 }
 .project-link{
-    text-decoration:underline var(--highlight-colour);
-    transition: ease-in-out 0.2s;
+    text-decoration:underline transparent;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 .project-link h3{
     color: white !important;
+    letter-spacing: 0.03em;
 }
 .project-link h3:hover{
     color: var(--highlight-colour) !important;
+}
+.project-container:hover .project-link{
+    text-decoration-color: var(--highlight-colour);
 }
 .project-header h3{
     color:var(--highlight-colour);
@@ -46,4 +59,11 @@
 }
 .project-desc{
     margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .project-container{
+        height: auto;
+        min-height: 10rem;
+    }
 }

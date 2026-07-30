@@ -1,45 +1,130 @@
-.router-section{
+.title-section {
+    position: relative;
+    z-index: 2;
+    max-width: 880px;
+}
+
+.title-section h3 {
+    margin-top: 12px;
+    width: min(700px, 92%);
+    font-size: 1.35rem;
+    line-height: 1.35;
+    color: rgba(240, 240, 240, 0.82);
+    font-weight: 400;
+}
+
+.router-section {
     position: absolute;
     z-index: 3;
-    bottom: 25%;
+    bottom: 17%;
     text-align: left;
     font-size: 4rem;
     font-weight: 300;
     width: 95%;
 }
-.router-section div{
-    margin-bottom: -0.75rem;
+
+.router-section div {
+    margin-bottom: -0.6rem;
     transition: ease-in-out 0.25s;
     display: flex;
     width: 100%;
 }
-.router-section-div{
+
+.router-section-div {
     justify-content: space-between;
+    align-items: center;
 }
-.router-section div.unselectable:hover{
-    color:var(--highlight-colour);
+
+.route-btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: 0.03em;
+    padding: 0;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
-.router-section a{
+
+.route-btn:hover,
+.route-btn:focus-visible {
+    color: var(--highlight-colour);
+    transform: translateX(7px);
+    outline: none;
+}
+
+.router-section a {
     text-decoration: none;
     color: inherit;
 }
 
-.link-icon{
+.link-icon {
     margin-top: 13px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-@media only screen and (max-height: 510px) {
-    .router-section{
-        bottom:auto;
+.link-icon:hover,
+.link-icon:focus-visible {
+    color: var(--highlight-colour);
+    transform: scale(1.08);
+}
+
+.bg-section {
+    z-index: 1;
+    opacity: 0.9;
+}
+
+@media only screen and (max-height: 620px) {
+    .router-section {
+        bottom: 8%;
     }
 }
-@media only screen and (max-width: 768px) {
-    .router-section{
-        font-size: 5rem;
+
+@media only screen and (max-width: 992px) {
+    .title-section h2 {
+        font-size: 4.2rem;
     }
-}
-@media only screen and (max-width: 575px) {
-    .router-section{
+
+    .title-section h3 {
+        font-size: 1.1rem;
         width: 90%;
+    }
+
+    .router-section {
+        font-size: 3.3rem;
+        bottom: 12%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .router-section {
+        font-size: 2.8rem;
+    }
+
+    .bg-section {
+        opacity: 0.6;
+    }
+
+    .bg-section h1 {
+        font-size: 5.4rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .router-section {
+        width: 90%;
+        bottom: 8%;
+    }
+
+    .title-section h2 {
+        font-size: 3rem;
+    }
+
+    .title-section h3 {
+        font-size: 0.95rem;
+    }
+
+    .link-icon {
+        margin-top: 7px;
     }
 }

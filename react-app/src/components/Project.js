@@ -24,7 +24,7 @@ class Project extends Component{
             return null;
         }else{
             return(
-                <a href={this.link} target='_black' className="project-link">
+                <a href={this.link} target='_blank' rel='noreferrer' className="project-link">
                     <h3 className="unselectable">link</h3>
                 </a>
             );

@@ -11,6 +11,12 @@
     justify-content: space-between;
     border: 0;
     border-top: 4px solid var(--main-bg-color);
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
+}
+.job-header:hover{
+    background-color: color-mix(in srgb, var(--secondary-bg-color) 82%, var(--highlight-colour));
+    border-left-color: var(--highlight-colour);
 }
 .job-header div{
     display: flex;
@@ -147,6 +153,16 @@
     border-color: var(--highlight-colour);
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .job-header,
+    .job-dropdown-container,
+    .job-title-right svg,
+    .job-image,
+    .job-skill-badge {
+        transition: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
