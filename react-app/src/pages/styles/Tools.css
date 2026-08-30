@@ -1,0 +1,106 @@
+.tools-info-block{
+    position: relative;
+    z-index: 2;
+    margin: 3rem 0 0 0;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    background-color: var(--secondary-bg-color);
+    border-left: 4px solid var(--highlight-colour);
+}
+.tools-info-block h3{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--highlight-colour);
+    margin: 0;
+}
+.tools-info-block h3 svg{
+    flex: 0 0 auto;
+}
+.tools-info-block p{
+    margin: 0.25rem 0 0 0;
+    font-weight: 300;
+}
+
+.tools-page{
+    position: relative;
+    z-index: 2;
+    margin: 1rem 0 4rem 0;
+    display: grid;
+    grid-template-columns: minmax(12rem, 18rem) 1fr;
+    gap: 1rem;
+    text-align: left;
+}
+
+.tools-tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tools-tabs button{
+    padding: 0.9rem 1rem;
+    color: white;
+    text-align: left;
+    background-color: var(--secondary-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.tools-tabs button:hover,
+.tools-tabs button.active{
+    color: var(--highlight-colour);
+    border-color: var(--highlight-colour);
+    transform: translateX(4px);
+}
+
+.tool-panel{
+    padding: 1.25rem;
+    background-color: var(--secondary-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tool-panel-header{
+    margin-bottom: 1rem;
+}
+.tool-panel-header h3{
+    color: var(--highlight-colour);
+    margin: 0;
+}
+.tool-panel-header p{
+    margin: 0.25rem 0 0 0;
+    font-weight: 300;
+}
+
+.tool-actions{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.tool-actions button{
+    flex: 1;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: transparent;
+    border: 1px solid var(--highlight-colour);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.tool-actions button:hover:not(:disabled){
+    background-color: var(--highlight-colour);
+    color: black;
+}
+.tool-actions button:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+    .tools-page{
+        grid-template-columns: 1fr;
+    }
+    .tools-tabs{
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .tools-tabs button{
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,132 @@
+.wifi-tool{
+    text-align: left;
+}
+
+.wifi-layout{
+    display: grid;
+    grid-template-columns: minmax(16rem, 22rem) 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.wifi-controls{
+    display: grid;
+    gap: 1rem;
+}
+.wifi-controls fieldset{
+    display: grid;
+    gap: 0.65rem;
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wifi-controls legend{
+    float: none;
+    width: auto;
+    padding: 0 0.35rem;
+    color: var(--highlight-colour);
+    font-size: 1rem;
+}
+.wifi-controls label{
+    display: grid;
+    grid-template-columns: 7rem 1fr auto;
+    gap: 0.65rem;
+    align-items: center;
+    margin: 0;
+}
+.wifi-controls input,
+.wifi-controls select{
+    min-width: 0;
+    padding: 0.42rem 0.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.wifi-controls input[type='color']{
+    width: 3rem;
+    height: 2.25rem;
+    padding: 0.1rem;
+}
+.wifi-controls input[type='range'],
+.wifi-controls input[type='checkbox']{
+    accent-color: var(--highlight-colour);
+}
+.wifi-controls input:focus,
+.wifi-controls select:focus{
+    outline: none;
+    border-color: var(--highlight-colour);
+}
+.wifi-check{
+    grid-template-columns: auto 1fr !important;
+}
+
+.wifi-accordion{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wifi-accordion summary{
+    padding: 0.85rem 1rem;
+    color: var(--highlight-colour);
+    cursor: pointer;
+    list-style-position: inside;
+}
+.wifi-accordion[open] summary{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wifi-accordion-content{
+    display: grid;
+    gap: 0.65rem;
+    padding: 1rem;
+}
+
+.wifi-file-button{
+    padding: 0.5rem 1rem;
+    color: white;
+    background: transparent;
+    border: 1px solid var(--highlight-colour);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.wifi-file-button:hover{
+    color: black;
+    background-color: var(--highlight-colour);
+}
+
+.wifi-preview{
+    position: sticky;
+    top: 1rem;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 22rem;
+    background-color: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.wifi-preview canvas{
+    max-width: 100%;
+    height: auto;
+}
+.wifi-preview p{
+    margin: 0;
+    text-align: center;
+}
+.wifi-hidden{
+    display: none;
+}
+.wifi-error{
+    color: #ff6b6b;
+}
+
+@media only screen and (max-width: 991px) {
+    .wifi-layout{
+        grid-template-columns: 1fr;
+    }
+    .wifi-preview{
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .wifi-controls label{
+        grid-template-columns: 1fr;
+    }
+}

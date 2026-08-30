@@ -36,7 +36,7 @@ function Home() {
           transitionEle[i].classList.add('transition-active');
         }
         setTimeout(() => {
-            window.location.href = `/#/${route}`;
+            window.location.href = `/${route.toLowerCase()}`;
             //set timing to opposite direction
             let pt1 = document.getElementsByClassName('pt-1')[0];
             pt1.classList.remove('pt-3t');
@@ -60,14 +60,14 @@ function Home() {
                     <button className='unselectable clickable route-btn' onClick={() => onDivClick('Projects')}>Projects</button>
                 </div>
                 <div className='router-section-div'>
-                    <button className='unselectable clickable route-btn' onClick={() => onDivClick('About')}>About</button>
+                    <button className='unselectable clickable route-btn' onClick={() => onDivClick('Tools')}>Tools</button>
                     <div></div>
                     <a href='https://www.github.com/WilliamFitzjohn' target='_blank' rel='noreferrer'>
                         <div className='unselectable clickable link-icon'><BsGithub/></div>
                     </a>
                 </div>
                 <div className='router-section-div'>
-                    <button className='unselectable clickable route-btn' onClick={() => onDivClick('Resume')}>Resume</button>
+                    <button className='unselectable clickable route-btn' onClick={() => onDivClick('About')}>About</button>
                     <div></div>
                     <a href='https://www.linkedin.com/in/WilliamFitzjohn' target='_blank' rel='noreferrer'>
                         <div className='unselectable clickable link-icon'><BsLinkedin/></div>

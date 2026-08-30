@@ -1,14 +1,10 @@
 import './styles/Projects.css'
 import './styles/Common.css'
-import { useState } from 'react';
-import { Container, Modal } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { BsBoxArrowInLeft } from 'react-icons/bs';
 import Project from '../components/Project'
-import WireguardQR from '../components/WireguardQR'
 
 function Projects() {
-
-    const [showWgTool, setShowWgTool] = useState(false);
 
     // On Load Transition
     const transitionEle = document.getElementsByClassName('page-transition');
@@ -62,10 +58,10 @@ function Projects() {
             <section className='content-container projects-container'>
                 <Project 
                     img='WireguardQRLogo.png'
-                    name='WireGuard QR Generator'
-                    tools='React, Browser-only'
-                    desc='Turn a WireGuard .conf file into a scannable QR code. Runs entirely in your browser, so the config never leaves your device.'
-                    onOpen={() => setShowWgTool(true)}
+                    name='Fitzjohn Tools'
+                    tools='React, Web Crypto, Browser-only'
+                    desc='A set of privacy-focused utilities that run entirely in your browser: WireGuard QR, random strings, and file hashing.'
+                    onOpen={() => { window.location.href = '/tools'; }}
                     />
                 <Project 
                     img='fitzjohnweddings.png'
@@ -133,14 +129,6 @@ function Projects() {
                     desc='A Minecraft mod using the Forge API which added new items and blocks into the game. This was my first programming project at age 13.'
                 />
             </section>
-            <Modal show={showWgTool} onHide={() => setShowWgTool(false)} centered size='lg' contentClassName='wg-modal'>
-                <Modal.Header closeButton closeVariant='white'>
-                    <Modal.Title>WireGuard QR Generator</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <WireguardQR />
-                </Modal.Body>
-            </Modal>
         </Container>
     );
 }
