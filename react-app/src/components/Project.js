@@ -9,6 +9,7 @@ class Project extends Component{
         this.desc = props.desc;
         this.img = props.img;
         this.link = props.link;
+        this.onOpen = props.onOpen;
     }
 
     getImg(){
@@ -20,6 +21,13 @@ class Project extends Component{
     }
 
     getLink(){
+        if(this.onOpen != null){
+            return(
+                <span className="project-link">
+                    <h3 className="unselectable">open</h3>
+                </span>
+            );
+        }
         if(this.link == null){
             return null;
         }else{
@@ -32,8 +40,15 @@ class Project extends Component{
     }
 
     render(){
+        const interactive = this.onOpen != null;
         return(
-            <div className="project-container">
+            <div
+                className={'project-container' + (interactive ? ' project-clickable' : '')}
+                onClick={interactive ? this.onOpen : undefined}
+                role={interactive ? 'button' : undefined}
+                tabIndex={interactive ? 0 : undefined}
+                onKeyDown={interactive ? (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); this.onOpen(); } } : undefined}
+            >
                 {this.getImg()}
                 <div>
                     <div className="project-header">

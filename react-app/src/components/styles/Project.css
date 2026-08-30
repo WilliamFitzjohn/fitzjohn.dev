@@ -14,6 +14,14 @@
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
 }
 
+.project-clickable{
+    cursor: pointer;
+}
+.project-clickable:focus-visible{
+    outline: 2px solid var(--highlight-colour);
+    outline-offset: 2px;
+}
+
 .project-container img{
     width: 10rem;
     height: 10rem;

@@ -8,6 +8,20 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.wg-modal{
+    background-color: var(--secondary-bg-color);
+    color: white;
+    border: 1px solid color-mix(in srgb, var(--highlight-colour) 40%, transparent);
+    border-radius: 0;
+}
+.wg-modal .modal-header,
+.wg-modal .modal-footer{
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.wg-modal .modal-title{
+    color: var(--highlight-colour);
+}
+
 @media only screen and (max-width: 1200px) {
     .content-container{
         grid-template-columns: 1fr;
