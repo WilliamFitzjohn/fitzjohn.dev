@@ -5,6 +5,8 @@ import { Container } from 'react-bootstrap';
 import { BsBoxArrowInLeft, BsLockFill } from 'react-icons/bs';
 import WireguardQR from '../components/WireguardQR';
 import WifiQR from '../components/WifiQR';
+import JwtDecoder from '../components/JwtDecoder';
+import DataFormatterDiff from '../components/DataFormatterDiff';
 import RandomStringGenerator from '../components/RandomStringGenerator';
 import FileHashTool from '../components/FileHashTool';
 
@@ -20,6 +22,18 @@ const tools = [
         name: 'WireGuard QR Code',
         description: 'Convert a WireGuard .conf file into a QR code while keeping your config private.',
         component: <WireguardQR />
+    },
+    {
+        id: 'jwt',
+        name: 'JWT Decoder',
+        description: 'Decode JWT headers and payloads locally without pasting tokens into a third-party site.',
+        component: <JwtDecoder />
+    },
+    {
+        id: 'formatter',
+        name: 'JSON/YAML Format + Diff',
+        description: 'Format, convert, and compare JSON or YAML documents entirely in your browser.',
+        component: <DataFormatterDiff />
     },
     {
         id: 'random',
