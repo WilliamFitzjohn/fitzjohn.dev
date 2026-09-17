@@ -120,7 +120,7 @@ function Projects() {
                     img='GPXLogo.png'
                     name='GPX Data Viewer'
                     tools='HTML, Node.js, Express.js, C, MySQL'
-                    desc='A full stack CRUD web app that works with GPX files that track GPS coordinates. Backend coded in C, frontend in JavaScript, HTML, CSS. Linked to a MySQL database.'
+                    desc='A full stack CRUD web app that works with GPX files that track GPS coordinates. Backend coded in C, frontend in JavaScript, HTML, CSS. Linked to a MySQL database. Hi Max.'
                 />
                 <Project 
                     img='PXORLogo.png'
